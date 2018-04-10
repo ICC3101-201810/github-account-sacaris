@@ -8,5 +8,12 @@ namespace ConsoleApp3
 {
     class Accesorios
     {
+        string tipo;
+        int precio;
+        public Accesorios(string mitipo, int miprecio)
+        {
+            tipo = mitipo;
+            precio = miprecio;
+        }
     }
 }

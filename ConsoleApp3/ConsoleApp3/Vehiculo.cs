@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3
 {
-    class Vehiculo
+    public class Vehiculo
     {
-        string tipo;
+        protected string tipo;
         string patente;
         string color;
 
@@ -19,21 +19,93 @@ namespace ConsoleApp3
             color = micolor;
         }
     }
-    class camion : Vehiculo
+    public class camion: Vehiculo
     {
         string marca;
         string modelo;
         int ano;
 
-        public camion(string mimarca, string mimodelo, int miano)
+        public camion(string mitipo, string mipatente, string micolor, string mimarca, string mimodelo, int miano)
+            :base(mitipo, mipatente, micolor)
         {
+            
             marca = mimarca;
             modelo = mimodelo;
             ano = miano;
         }
     }
-    class auto:Vehiculo
+    public class maqpesada: Vehiculo
     {
+        string marca;
+        string modelo;
+        int ano;
+        public maqpesada(string mitipo, string mipatente, string micolor, string mimarca, string mimodelo, int miano)
+            : base(mitipo, mipatente, micolor)
+        {
 
+            marca = mimarca;
+            modelo = mimodelo;
+            ano = miano;
+        }
     }
+    public class auto: Vehiculo
+    {
+        string marca;
+        string modelo;
+        int ano;
+        public auto(string mitipo, string mipatente, string micolor, string mimarca, string mimodelo, int miano)
+            : base(mitipo, mipatente, micolor)
+        {
+
+            marca = mimarca;
+            modelo = mimodelo;
+            ano = miano;
+        }
+    }
+    public class acuatico: Vehiculo
+    {
+        string marca;
+        string modelo;
+        int ano;
+
+        public acuatico(string mitipo, string mipatente, string micolor, string mimarca, string mimodelo, int miano)
+            :base(mitipo, mipatente, micolor)
+        {
+
+            marca = mimarca;
+            modelo = mimodelo;
+            ano = miano;
+        }
+    }
+    public class moto: Vehiculo
+    {
+        string marca;
+        string modelo;
+        int ano;
+
+        public moto(string mitipo, string mipatente, string micolor, string mimarca, string mimodelo, int miano)
+            :base(mitipo, mipatente, micolor)
+        {
+
+            marca = mimarca;
+            modelo = mimodelo;
+            ano = miano;
+        }
+    }
+    public class bus: Vehiculo
+    {
+        string marca;
+        string modelo;
+        int ano;
+
+        public bus(string mitipo, string mipatente, string micolor, string mimarca, string mimodelo, int miano)
+            :base(mitipo, mipatente, micolor)
+        {
+
+            marca = mimarca;
+            modelo = mimodelo;
+            ano = miano;
+        }
+    }
+    
 }
